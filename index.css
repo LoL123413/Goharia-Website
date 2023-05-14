@@ -1,8 +1,8 @@
 #aa {
     
     text-align: center;
-    font-size: 60;
-    stroke-width: 500;
+    font-size: 500%;
+    stroke-width: 500%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(255, 255, 255);
     -webkit-text-stroke: 3px rgb(255, 251, 210);
