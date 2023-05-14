@@ -1,0 +1,16 @@
+#aa {
+    
+    text-align: center;
+    font-size: 5vw;
+    stroke-width: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 3px rgb(255, 251, 210);
+
+}
+body {
+    background-image: url("tile_background\(1\).png");
+}
+#pass {
+    text-align: center;
+}
