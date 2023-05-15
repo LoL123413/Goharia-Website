@@ -59,19 +59,27 @@
 
   .card {
   background-color:rgb(67, 46, 134);
-  max-width: 300px;
-  margin: auto;
+  width: 300px;
   height: 500px;
   border-radius: 50px;
   padding: 1rem 1.5rem 1.5rem 1.5rem;
-position: relative;
-flex-direction: column;
+  border: 1px;
+  float: left;
+
+  margin-bottom: 1%;
+  margin-right: 1%;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  display: block;
+  align-self: center;
+  
 }
 
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
-    display: block;
+    display: flex;
     margin-bottom: 20px;
   }
 }
@@ -108,12 +116,10 @@ button:hover, a:hover {
  </body>
  <style>
  .center {
-  display: block;
+  display: flex;
   margin-left: auto;
   border-radius: 25px;
   margin-right: auto;
-  padding-top: 5px;
-	padding-bottom: 5px;
     width: auto ;
   max-width: 70% ;
   height: auto ;
@@ -130,6 +136,42 @@ button:hover, a:hover {
   max-width: 250% ;
   height: auto ;
   }
+  .container{
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  }
+  .container .card:first-child {
+  margin-left: 0;
+  align-self: center;
+}
+
+
+/*last element of the first row*/
+
+.container .card:nth-child(5n) {
+  margin-right: 0;
+  align-self: center;
+}
+
+
+/*first-element of the 2nd row*/
+
+.container .card:nth-child(5n+1) {
+  margin-left: 0;
+  align-self: center;
+}
+
+
+/*last element*/
+
+.container .card:last-child {
+  margin-right: 0;
+  align-self: center;
+}
   textarea {
   resize: none;
 }
@@ -139,7 +181,7 @@ button:hover, a:hover {
  <img src="goharia pass.png" class="center" style="max-width: 230px">
  <br><br>
  </div>
-<div id="container">
+
     <button class="button button4" onclick="location.href='apply.html'">  <span style="font-size: 30px;"> Apply </span></button>
 
 </div>
@@ -150,12 +192,10 @@ button:hover, a:hover {
     <h1 style="text-align: center;"><span style='font-size: 60px; font-family: "Trebuchet MS", Helvetica, sans-serif;'>Verified Citizens<span style="color: rgb(200, 200, 200);">:</span></span></h1><br><br><br><br>
   
 <div style="text-align: center;">
-    <div style="display: inline-block; text-align: left;">
-     
-</div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<div id="">
+  <span style="align-items: center;">
 <div class="card" style="background-color: #68973e;">
     <br><br>
     <img src="crown.png"style="width: 30%;">
@@ -166,8 +206,7 @@ button:hover, a:hover {
   <p class="title" style='font-size: 80%;'><i>~ I always dreamed about founding a nation where everybody lives in peace.</i></p>
 <br>
 </div>
-</div>
-<br><br>
+
 
 <div class="card">
     <br><br>
@@ -179,7 +218,7 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #290000">
@@ -191,23 +230,23 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #000000">
-    <br><br>
+ 
   <img src="6d88a6d8494b8c9ecba406dc3d0e14a0.png" alt="Perfectly Parallel Punderful IV" style="border-radius: 100%; width: 70%;">
-  <h1><div class="title" style="font-size: 150%;">Perfectly Parallel Punderful IV</div></h1>
+  <h1><div class="title" style="font-size: 100%;">Perfectly Parallel Punderful IV</div></h1>
   <p class="title" style='font-size: 150%;'>Left Hand Man of the Emperor of Goharia</p>
-  <p class="title" style='font-size: 80%;'><i>~ I like paperclips and cookies.</i></p>
+  <p class="title" style='font-size: 80%;'><i>~ The lust in your heart may ache, but sometimes it's better to not get involved.</i></p>
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #4b8743">
-    <br><br>
+  
   <img src="46afbc4c449f92a99d2ffcd9d5477388(1).png" alt="Gohar's Guide Bot" style="border-radius: 100%; width: 70%;">
   <h1><div class="title" style="font-size: 150%;">Gohar's Guide Bot</div></h1>
   <p class="title" style='font-size: 150%;'>Gohar's Guide Bot</p>
@@ -215,11 +254,9 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
-
 
 <div class="card" style="background-color: #00cb35">
-    <br><br>
+
   <img src="2ec50a92fabc4ae85a893810bd801605.png" alt="Dug" style="border-radius: 100%; width: 70%;">
   <h1><div class="title" style="font-size: 150%;">Sr Dug</div></h1>
   <p class="title" style='font-size: 150%;'>Drug Dealer</p>
@@ -227,7 +264,7 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #8aba66">
@@ -238,7 +275,7 @@ button:hover, a:hover {
   <p class="title" style='font-size: 80%;'><i>~ imma shove a banana uo your ass</i></p>
 <br>
 </div>
-<br><br>
+
 
 
 <div class="card" style="background-color: #ff6d6d">
@@ -250,7 +287,7 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #f40b0b">
@@ -262,7 +299,7 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #51d400">
@@ -275,7 +312,7 @@ button:hover, a:hover {
 </div>
 
   
-<br><br>
+
 
 
 <div class="card" style="background-color: #2080f5">
@@ -289,8 +326,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
-
 
 <div class="card" style="background-color: #00e6ea">
     <br><br>
@@ -302,7 +337,7 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #e66465">
@@ -316,9 +351,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
-
-
 <div class="card" style="background-color: #0056d6">
     <br><br>
   <img src="meh.png" alt="meh" style="border-radius: 100%; width: 70%;">
@@ -328,8 +360,6 @@ button:hover, a:hover {
 <br>
 </div>
 
-
-<br><br>
 
 
 <div class="card" style="background-color: #5e5e5e">
@@ -342,8 +372,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
-
 
 <div class="card" style="background-color: #05d5ff">
     <br><br>
@@ -355,20 +383,17 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #e66465">
     <br><br>
   <img src="ffd67cc1bff12e3518b056f71942f9cb.png" alt="Niha" style="border-radius: 100%; width: 70%;">
   <h1><div class="title" style="font-size: 150%;">Niha</div></h1>
-  <p class="title" style='font-size: 150%;'>Self-proclaimed Therapist</p>
+  <p class="title" style='font-size: 150%;'>Therapist</p>
   <p class="title" style='font-size: 80%;'><i>~ In the end, it's not the years in your life that count. It's the life in your years. </i></p>
 <br>
 </div>
 
-
-<br><br>
 
 
 <div class="card" style="background-color: #ed94ff">
@@ -381,8 +406,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
-
 
 <div class="card" style="background-color: #1fc4c4">
     <br><br>
@@ -394,7 +417,7 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #6475e6">
@@ -406,7 +429,7 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #000000">
@@ -418,7 +441,7 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #73a3c4">
@@ -430,7 +453,7 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
+
 
 
 <div class="card" style="background-color: #a3c8a7">
@@ -444,7 +467,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #070f50">
@@ -458,8 +480,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
-
 
 <div class="card" style="background-color: #9fa1c2">
     <br><br>
@@ -470,7 +490,6 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
 
 
 <div class="card" style="background-color: #b8a878">
@@ -483,7 +502,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #e66465">
@@ -496,7 +514,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #f95de4">
@@ -509,7 +526,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #451e9f">
@@ -523,7 +539,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #2e063d">
@@ -535,7 +550,6 @@ button:hover, a:hover {
 <br>
 </div>
 
-<br><br>
 
 
 <div class="card" style="background-color: #ff335f">
@@ -549,8 +563,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
-
 
 <div class="card" style="background-color: #e66465">
     <br><br>
@@ -562,7 +574,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #000000">
@@ -577,10 +588,6 @@ button:hover, a:hover {
 
 
 
-
-<br><br>
-
-
 <div class="card" style="background-color: #37197d">
     <br><br>
   <img src="9782ca8bc4c95b9ab3f708182f369901.png" alt="U+2C97&27A4" style="border-radius: 100%; width: 70%;">
@@ -591,7 +598,6 @@ button:hover, a:hover {
 </div>
 
 
-<br><br>
 
 
 <div class="card" style="background-color: #24bbe0">
@@ -604,8 +610,6 @@ button:hover, a:hover {
 </div>
 
 
-
-<br><br>
 
 
 <div class="card" style="background-color: #e66465">
@@ -620,9 +624,6 @@ button:hover, a:hover {
 
 
 
-<br><br>
-
-
 <div class="card" style="background-color: #7b7b7b">
     <br><br>
   <img src="https://images-ext-2.discordapp.net/external/mlvOykEMVlpMJAFu80xFnqs5sf4ByHyn-DBOIX0Cgug/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1106714754581528676/e2e64fb9bb39d363fe138ed2e073127c.png" alt="Tungsten" style="border-radius: 100%; width: 70%;">
@@ -632,15 +633,18 @@ button:hover, a:hover {
 <br>
 </div>
 
+  </span>
 
 
 
+</div>
 
 
+</div>
 
 
  </div>
  <br><br><br></div>
- <h3 style="text-align: center;"><span style='font-size: 20px; font-family: "Trebuchet MS", Helvetica, sans-serif;'><span style="color: rgb(200, 200, 200);"> This is the only official website of the Kingdom of Goharia. Impersonation of any government official or organization will be punishable by a fine or jail sentence.</span></span></h2><br><br><br><br>
+
  
  </html>
