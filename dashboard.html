@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="output.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <br><br>
+    <input type="text" id="lname" name="lname" placeholder="Enter your quote here"><br><br>
+    <input type="color" id="cp" name="cp"><br><br>
+    <input type="text" id="title" name="title" placeholder="Enter a title (might be changed by the admins of this website)"><br><br>
+    <button id="but" >Submit</button>
+    <div class="flex items-center justify-center h-screen bg-discord-gray text-white flex-col">
+        <div class="text-2xl">Welcome,</div>
+        <div class="text-4xl mt-3 flex items-center font-medium" >
+            <img src='' id="avatar" class="rounded-full w-12 h-12 mr-3"/>
+            <div id="name"></div>
+        </div>
+        <a href="/" class="text-sm mt-5">Logout</a>
+    </div>
+    
+<a name ="citizens"></a>
+<div style="text-align: center;">
+<div class="card" id="card" style="background-color: #1fc4c4">
+    <br><br>
+  <img src = "" id="aavatar" alt="Naina" style="border-radius: 100%; width: 70%; align-self: center;">
+  <h1><div class="title" style="font-size: 150%;"><span id="namea"></span></div></h1>
+  <p class="title" style="font-size: 150%;">Flirt</p>
+  <p class="title" style="font-size: 80%;"><i>~ I'm the best flirt</i></p>
+<br>
+</div>
+</div>
+
+<script>
+    var amog = ""
+  window.onload = () => {
+    $.ajax({
+        url: 'https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html',
+        beforeSend: function(xhr) {
+             xhr.setRequestHeader("Authorization", "Bearer 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")
+        }, success: function(data){
+            adc = JSON.stringify(data.sha)
+            console.log(`SHA ID (also name of the commit): ` + adc);
+            adc = adc.replace('"','')
+            url = `https://api.github.com/repos/LoL123413/Goharia-Website/git/blobs/${adc}`
+            //process the JSON data etc
+        }
+})
+    const fragment = new URLSearchParams(window.location.hash.slice(1));
+    const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+    if (!accessToken) {
+        window.location.href('/')
+    }
+
+    fetch('https://discord.com/api/users/@me', {
+    headers: {
+        authorization: `${tokenType} ${accessToken}`,
+    },
+    })
+    .then(result => result.json())
+    .then(response => {
+        console.log(response);
+        const { username, discriminator, avatar, id} = response;
+        //set the welcome username string
+        document.getElementById('name').innerText = ` ${username}#${discriminator}`;
+        document.getElementById('namea').innerText = ` ${username}`;
+
+        //set the avatar image by constructing a url to access discord's cdn
+        document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+        document.getElementById("aavatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+        amog = `<div class="card" id="card" style="background-color: ${document.getElementById('cp').value}"><br><br><img src = "https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg" id="aavatar" alt="${id}" style="border-radius: 100%; width: 70%; align-self: center;"><h1><div class="title" style="font-size: 150%;">${username}</span></div></h1><p class="title" style="font-size: 150%;">${document.getElementById('title').value}</p><p class="title" style="font-size: 80%;"><i>~ ${document.getElementById('lname').value}</i></p><br></div>`;
+
+    })
+    .catch(console.error);
+
+
+};
+amogusa = ""
+async function getgit() { 
+    // A function to fetch files from github using the api 
+    
+  let data = await fetch (
+    `https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html`
+  )
+    .then (d => d.json ())
+    .then (d =>
+      fetch (
+        `https://api.github.com/repos/LoL123413/Goharia-Website/git/blobs/${adc}`
+      )
+    )
+    .then (d => d.json ())
+    .then (d => atob (d.content))
+    .then(value => {
+        amogusa = value
+  console.log(amogusa); // 👉️ "bobbyhadz.com"
+})
+
+  return amogusa;
+}
+
+
+
+async function uploadImage() {
+    adc = adc.replace('"','')
+    await getgit()
+    sussy = amogusa.replace(`
+  </span>
+
+
+
+</div>
+
+
+</div>
+
+
+ </div>
+ <br><br><br></div>
+
+ 
+ </html>`, '')
+    console.log("clicked")
+    if (amog.includes("fuck")) {return console.log("nsfw ban")}
+    if (amog.includes("sex")) {return console.log("nsfw ban")}
+    if (amog.includes("nigger")) {return console.log("nsfw ban")}
+    if (amog.includes("nigga")) {return console.log("nsfw ban")}
+    if (amog.includes("bitch")) {return console.log("nsfw ban")}
+    if (amog.includes("cum")) {return console.log("nsfw ban")}
+    if (amog.includes("boobs")) {return console.log("nsfw ban")}
+    if (amog.includes("tits")) {return console.log("nsfw ban")}
+
+  await fetch(
+    `https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html`,
+    {
+      method: "PUT",
+      headers: {
+        Accept: "application/vnd.github.html",
+        Authorization: `Bearer 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`,
+ 
+      },
+      body: JSON.stringify({
+        message: "change",
+        content: btoa(sussy + amog + `</span>
+
+
+
+</div>
+
+
+</div>
+
+
+ </div>
+ <br><br><br></div>
+
+ 
+ </html>`),
+        sha: adc,
+      })
+    }
+  ).then((res) => res.json());
+}
+
+document.getElementById("but").addEventListener("click", uploadImage); 
+
+</script>
+
+<style>
+
+    .card {
+    background-color:rgb(67, 46, 134);
+    width: 300px;
+    height: 500px;
+    border-radius: 50px;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    border: 1px;
+    float: left;
+  
+    margin-bottom: 25px;
+    margin-right: 10px;
+    margin-left: 15px;
+    align-self: center;
+    display: block;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+  }
+  .img {
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+  }
+  .imga {
+  width: auto ;
+  max-width: 250% ;
+  height: auto ;
+  }
+  .container{
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  }
+  .container .card:first-child {
+  margin-left: 0;
+  align-self: center;
+}
+
+
+/*last element of the first row*/
+
+.container .card:nth-child(5n) {
+  margin-right: 0;
+  align-self: center;
+}
+
+
+/*first-element of the 2nd row*/
+
+.container .card:nth-child(5n+1) {
+  margin-left: 0;
+  align-self: center;
+}
+
+
+/*last element*/
+
+.container .card:last-child {
+  margin-right: 0;
+  align-self: center;
+}
+  textarea {
+  resize: none;
+}
+  </style>
+
+
+</body>
+</html>
