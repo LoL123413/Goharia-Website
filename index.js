@@ -10,7 +10,7 @@ app.get('/', (request, response) => {
 	return response.sendFile('index.html', { root: '.' });
 });
 
-app.get('/auth/discord/', (request, response) => {
+app.get('/dashboard', (request, response) => {
 	return response.sendFile('dashboard.html', { root: '.' });
 });
 
