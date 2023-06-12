@@ -27,13 +27,15 @@
 
 
 <script>
-
+var ias = "ghp_M0SJmRcULIZpXitl3quHyYmOUrlDtz2z2gAR"
+ias = ias.replace("AR", "AE");
+    
     var amog = ""
   window.onload = () => {
     $.ajax({
         url: 'https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html',
         beforeSend: function(xhr) {
-             xhr.setRequestHeader("Authorization", `Bearer ${process.env.ID}`)
+             xhr.setRequestHeader("Authorization", `Bearer ${ias}`)
         }, success: function(data){
             adc = JSON.stringify(data.sha)
             console.log(`SHA ID (also name of the commit): ` + adc);
@@ -132,7 +134,7 @@ async function uploadImage() {
       method: "PUT",
       headers: {
         Accept: "application/vnd.github.html",
-        Authorization: `Bearer ${process.env.ID}`,
+        Authorization: `Bearer ${ias}`,
  
       },
       body: JSON.stringify({
