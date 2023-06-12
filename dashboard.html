@@ -66,6 +66,8 @@ ias = ias.replace("AR", "AE");
         //set the avatar image by constructing a url to access discord's cdn
         document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
         document.getElementById("aavatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+        amog = `<div class="card" id="card" style="background-color: ${document.getElementById('cp').value}"><br><br><img src = "https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg" id="aavatar" alt="${id}" style="border-radius: 100%; width: 70%; align-self: center;"><h1><div class="title" style="font-size: 150%;">${username}</span></div></h1><p class="title" style="font-size: 150%;">${document.getElementById('title').value}</p><p class="title" style="font-size: 80%;"><i>~ ${document.getElementById('lname').value}</i></p><br></div>`;
+
       
       
     })
@@ -75,8 +77,7 @@ ias = ias.replace("AR", "AE");
 };
 amogusa = ""
 async function getgit() { 
-    amog = `<div class="card" id="card" style="background-color: ${document.getElementById('cp').value}"><br><br><img src = "https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg" id="aavatar" alt="${id}" style="border-radius: 100%; width: 70%; align-self: center;"><h1><div class="title" style="font-size: 150%;">${username}</span></div></h1><p class="title" style="font-size: 150%;">${document.getElementById('title').value}</p><p class="title" style="font-size: 80%;"><i>~ ${document.getElementById('lname').value}</i></p><br></div>`;
-    // A function to fetch files from github using the api 
+       // A function to fetch files from github using the api 
     
   let data = await fetch (
     `https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html`
