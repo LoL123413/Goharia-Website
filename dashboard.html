@@ -61,8 +61,6 @@ ias = ias.replace("AR", "AE");
         const { username, discriminator, avatar, id} = response;
         //set the welcome username string
                 document.getElementById('name').innerText = ` ${username}#${discriminator}`;
-        document.getElementById('namea').innerText = ` ${username}`;
-
         //set the avatar image by constructing a url to access discord's cdn
        amog = `<div class="card" id="card" style="background-color: ${document.getElementById('cp').value}"><br><br><img src = "https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg" id="aavatar" alt="${id}" style="border-radius: 100%; width: 70%; align-self: center;"><h1><div class="title" style="font-size: 150%;">${username}</span></div></h1><p class="title" style="font-size: 150%;">${document.getElementById('title').value}</p><p class="title" style="font-size: 80%;"><i>~ ${document.getElementById('lname').value}</i></p><br></div>`;
 
