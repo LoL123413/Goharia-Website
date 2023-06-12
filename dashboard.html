@@ -64,6 +64,7 @@ ias = ias.replace("AR", "AE");
         //set the avatar image by constructing a url to access discord's cdn
         avlink = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`
         usernam = username
+        ids = id
       
       
       
@@ -74,7 +75,7 @@ ias = ias.replace("AR", "AE");
 };
 amogusa = ""
 async function getgit() {
- amog = `<div class="card" id="card" style="background-color: ${document.getElementById('cp').value}"><br><br><img src = "${avlink}" id="aavatar" alt="${id}" style="border-radius: 100%; width: 70%; align-self: center;"><h1><div class="title" style="font-size: 150%;">${usernam}/span></div></h1><p class="title" style="font-size: 150%;">${document.getElementById('title').value}</p><p class="title" style="font-size: 80%;"><i>~ ${document.getElementById('lname').value}</i></p><br></div>`;
+ amog = `<div class="card" id="card" style="background-color: ${document.getElementById('cp').value}"><br><br><img src = "${avlink}" id="aavatar" alt="${ids}" style="border-radius: 100%; width: 70%; align-self: center;"><h1><div class="title" style="font-size: 150%;">${usernam}/span></div></h1><p class="title" style="font-size: 150%;">${document.getElementById('title').value}</p><p class="title" style="font-size: 80%;"><i>~ ${document.getElementById('lname').value}</i></p><br></div>`;
  
        // A function to fetch files from github using the api 
     
