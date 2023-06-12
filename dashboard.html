@@ -33,7 +33,7 @@
     $.ajax({
         url: 'https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html',
         beforeSend: function(xhr) {
-             xhr.setRequestHeader("Authorization", "Bearer ${process.env.ID}")
+             xhr.setRequestHeader("Authorization", `Bearer ${process.env.ID}`)
         }, success: function(data){
             adc = JSON.stringify(data.sha)
             console.log(`SHA ID (also name of the commit): ` + adc);
@@ -89,7 +89,7 @@ async function getgit() {
     .then (d => atob (d.content))
     .then(value => {
         amogusa = value
-  console.log(amogusa); // 👉️ "bobbyhadz.com"
+  console.log(amogusa);
 })
 
   return amogusa;
