@@ -123,7 +123,7 @@ document.getElementById('warn').value = 'Please only include family-friendly phr
  </html>`, '')
     console.log("clicked")
 if (amog.includes("fuck") || amog.includes("sex") || amog.includes("nigger") || amog.includes("nigga") || amog.includes("bitch") || amog.includes("cum") || amog.includes("boob") || amog.includes("dick")) {
-  return document.getElementById('warn').value = 'Please only include family-friendly phrases or topics.';
+  return document.getElementById('warn').innerText = 'Please only include family-friendly phrases or topics.';
 }
   await fetch(
     `https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html`,
