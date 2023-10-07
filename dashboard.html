@@ -82,12 +82,12 @@ async function getgit() {
        // A function to fetch files from github using the api 
     
   let data = await fetch (
-    `https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html`
+    `https://api.github.com/repos/LoL123413/react-testing/contents/index.html`
   )
     .then (d => d.json ())
     .then (d =>
       fetch (
-        `https://api.github.com/repos/LoL123413/Goharia-Website/git/blobs/${adc}`
+        `https://api.github.com/repos/LoL123413/react-testing/git/blobs/${adc}`
       )
     )
     .then (d => d.json ())
@@ -126,7 +126,7 @@ if (amog.includes("fuck") || amog.includes("sex") || amog.includes("nigger") || 
   return document.getElementById('warn').innerText = 'Please only include family-friendly phrases or topics.';
 }
   await fetch(
-    `https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html`,
+    `https://api.github.com/repos/LoL123413/react-testing/contents/index.html`,
     {
       method: "PUT",
       headers: {
