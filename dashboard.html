@@ -33,14 +33,14 @@ ias = ias.replace("AR", "AE");
   window.onload = () => {
 
     $.ajax({
-        url: 'https://api.github.com/repos/LoL123413/Goharia-Website/contents/index.html',
+        url: 'https://api.github.com/repos/LoL123413/react-testing/contents/index.html',
         beforeSend: function(xhr) {
              xhr.setRequestHeader("Authorization", `Bearer ${ias}`)
         }, success: function(data){
             adc = JSON.stringify(data.sha)
             console.log(`SHA ID (also name of the commit): ` + adc);
             adc = adc.replace('"','')
-            url = `https://api.github.com/repos/LoL123413/Goharia-Website/git/blobs/${adc}`
+            url = `https://api.github.com/repos/LoL123413/react-testing/git/blobs/${adc}`
             //process the JSON data etc
         }
 })
